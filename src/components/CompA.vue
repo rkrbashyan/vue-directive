@@ -15,11 +15,11 @@ export default {
   created() {
     console.log("COMP-A: created");
   },
-  mounted() {
-    console.log("COMP-A: mounted");
-  },
   beforeMount() {
     console.log("COMP-A: beforeMount");
+  },
+  mounted() {
+    console.log("COMP-A: mounted");
   },
   beforeDestroy() {
     console.log("COMP-A: beforeDestroy");

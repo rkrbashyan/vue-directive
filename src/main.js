@@ -20,6 +20,10 @@ Vue.directive('dummy', {
     },
     unbind: function(el) {
         console.log('DIRECTIVE', 'UNBIND');
+
+        // remove event listeners during next tick
+        // otherwise after navigation from CompA to CompB is completed
+        // listinner are killed before they are called !
         setTimeout(() => el.removeEventListener('click', log), 0);
     },
 });
